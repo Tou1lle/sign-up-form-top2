@@ -5,6 +5,8 @@ body {
 
 body > .logo-container {
   flex: 1 1 auto;
+  background-image: url("../assets/imgs/leafs-top.jpg");
+  background-size: cover;
 }
 
 body > .form-container {
