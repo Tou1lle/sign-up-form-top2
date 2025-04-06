@@ -3,6 +3,14 @@
   src: url(../assets/fonts/Norse-Bold.otf) format(opentype);
 }
 
+:root {
+  --logo-bg-color: rgb(10, 10, 10, 0.7);
+  --logo-text-color: #FFF;
+  --logo-font: "north-odin", Arial, Helvetica, sans-serif;
+  --form-bg-darker: #f9f9f9;
+  --hover-text-color: lime;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -14,7 +22,7 @@ body > .logo-container {
   background-image: url("../assets/imgs/leafs-top.jpg");
   background-size: cover;
   position: relative;
-  color: #FFF;
+  color: var(--logo-text-color);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -30,13 +38,13 @@ body > .form-container {
   position: absolute;
   padding: 1rem 0;
   width: 100%;
-  background-color: rgb(10, 10, 10, 0.7);
+  background-color: var(--logo-bg-color);
   top: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  font-family: "north-odin", Arial, Helvetica, sans-serif;
+  font-family: var(--logo-font);
 }
 
 img[src="assets/imgs/odin-lined.png"] {
@@ -49,5 +57,41 @@ img[src="assets/imgs/odin-lined.png"] {
 }
 
 a:link {
-  color: #FFF;
+  color: var(--logo-text-color);
+}
+
+a:hover {
+  color: var(--hover-text-color);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .form-paragraph-container,
+.form-container .form-inputs-container,
+.form-container .form-accountBtn-container {
+  flex: 1;
+}
+
+.form-paragraph-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--form-bg-darker);
+}
+
+.form-paragraph-container p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.2rem;
+}
+
+.form-paragraph-container p:first-child {
+  padding-right: 20%;
+}
+
+.form-paragraph-container p:last-child {
+  padding: 0.5rem 1.2rem;
 }
