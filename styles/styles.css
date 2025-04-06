@@ -4,14 +4,19 @@ body {
 }
 
 body > .logo-container {
-  flex: 1 1 auto;
+  flex: 1 1 30%;
   background-image: url("../assets/imgs/leafs-top.jpg");
   background-size: cover;
   position: relative;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 body > .form-container {
-  flex: 2 1 auto;
+  flex: 2 1 70%;
 }
 
 .odin-logo-container {
@@ -19,7 +24,6 @@ body > .form-container {
   position: absolute;
   padding: 1rem 0;
   width: 100%;
-  color: #FFF;
   background-color: rgb(10, 10, 10, 0.7);
   top: 20%;
   display: flex;
@@ -31,4 +35,12 @@ body > .form-container {
 img[src="assets/imgs/odin-lined.png"] {
   width: clamp(100px, 30%, 200px);
   height: auto;
+}
+
+.author-leaf {
+  padding: 0.7rem;
+}
+
+a:link {
+  color: #FFF;
 }
