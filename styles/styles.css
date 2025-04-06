@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "north-odin";
+  src: url(../assets/fonts/Norse-Bold.otf) format(opentype);
+}
+
 body {
   display: flex;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body > .logo-container {
@@ -20,7 +26,7 @@ body > .form-container {
 }
 
 .odin-logo-container {
-  font-size: 3rem;
+  font-size: 6rem;
   position: absolute;
   padding: 1rem 0;
   width: 100%;
@@ -29,11 +35,12 @@ body > .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  font-family: "north-odin", Arial, Helvetica, sans-serif;
 }
 
 img[src="assets/imgs/odin-lined.png"] {
-  width: clamp(100px, 30%, 200px);
+  width: clamp(100px, 20%, 200px);
   height: auto;
 }
 
