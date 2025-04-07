@@ -11,7 +11,7 @@
   --hover-text-color: lime;
   --btn-bg-color: #596D48;
   --input-border-default: #E5E7EB;
-  --input-invalid: #ff0000;
+  --input-invalid-basic: #ffaa00;
   --input-focus: #5a90fc;
 }
 
@@ -154,6 +154,7 @@ form > div {
   width: 40%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 label {
@@ -171,4 +172,29 @@ input:focus {
   outline: none;
   border: 2px solid var(--input-focus);
   box-shadow: 0px 0px 25px -10px #000000;
+}
+
+input[type="email"]:required:invalid + span::after {
+  content: "Format: john@email";
+}
+
+input[type="password"]:required:invalid + span::after {
+  content: "Minimum 8 characters";
+}
+
+input:invalid + span::after{
+  position: absolute;
+  content: "Required";
+  display: block;
+  right: 0px;
+  top: -15px;
+  background-color: var(--input-invalid-basic);
+  color: var(--logo-text-color);
+  padding: 3px 13px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+}
+
+input:required:invalid {
+  border: 2px solid var(--input-invalid-basic);
 }
