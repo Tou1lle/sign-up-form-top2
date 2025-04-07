@@ -10,6 +10,9 @@
   --form-bg-darker: #f9f9f9;
   --hover-text-color: lime;
   --btn-bg-color: #596D48;
+  --input-border-default: #E5E7EB;
+  --input-invalid: #ff0000;
+  --input-focus: #5a90fc;
 }
 
 body {
@@ -101,6 +104,7 @@ a:hover {
 .form-inputs-container {
   box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.9);
   z-index: 1;
+  padding: 1.2rem;
 }
 
 .form-accountBtn-container {
@@ -137,4 +141,34 @@ span.log-in {
 span.log-in:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+form {
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+form > div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+input {
+  border: 2px solid var(--input-border-default);
+  border-radius: 7px;
+  height: 2rem;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--input-focus);
+  box-shadow: 0px 0px 25px -10px #000000;
 }
